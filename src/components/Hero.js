@@ -24,20 +24,22 @@ const Hero = () => {
 
   return (
     <React.Fragment>
-      <div id='mySidenav' className='sidenav'>
-        <Link to='/login' id='login' onClick={getCategory}>
-          LOGIN AS ADMIN
-        </Link>
-      </div>
-      <div id='mySidenav1' className='sidenav' onClick={getCategory}>
-        <Link to='/login' id='login1'>
-          LOGIN AS DOCTOR
-        </Link>
-      </div>
-      <div id='mySidenav2' className='sidenav' onClick={getCategory}>
-        <Link to='/login' id='login2'>
-          LOGIN AS STAFF
-        </Link>
+      <div className='login__buttons'>
+        <div id='mySidenav' className='sidenav'>
+          <Link to='/login' id='login' onClick={getCategory}>
+            LOGIN AS ADMIN
+          </Link>
+        </div>
+        <div id='mySidenav1' className='sidenav' onClick={getCategory}>
+          <Link to='/login' id='login1'>
+            LOGIN AS DOCTOR
+          </Link>
+        </div>
+        <div id='mySidenav2' className='sidenav' onClick={getCategory}>
+          <Link to='/login' id='login2'>
+            LOGIN AS STAFF
+          </Link>
+        </div>
       </div>
       <div className='hero__container'>
         <div className='section'>

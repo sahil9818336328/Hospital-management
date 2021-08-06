@@ -148,3 +148,20 @@ button {
     font-size: 15px;
   }
 }
+@media screen and (max-width: 576px) {
+  #mySidenav a,
+  #mySidenav1 a,
+  #mySidenav2 a {
+    width: fit-content;
+    font-size: 1rem;
+  }
+  #mySidenav a {
+    right: 0;
+  }
+  #mySidenav1 a {
+    right: -3rem;
+  }
+  #mySidenav2 a {
+    right: -3.5rem;
+  }
+}
