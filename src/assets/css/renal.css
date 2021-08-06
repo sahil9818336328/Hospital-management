@@ -1,0 +1,51 @@
+.renal__container {
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+}
+.renal__info__section {
+  text-align: center;
+  cursor: pointer;
+}
+.renal__info__section:not(:first-child) {
+  border-left: 1px solid #63599e;
+  padding-left: 1rem;
+}
+.renal__info__section:hover .renal__info__btn p {
+  background-color: #63599e;
+  color: var(--grey-100);
+}
+.renal__info__section h3 {
+  font-size: 13px;
+  font-weight: 700;
+}
+.renal__info__section p {
+  font-size: 14px;
+}
+.renal__info__btn {
+  color: #63599e;
+  font-weight: 700;
+}
+.renal__info__btn p {
+  margin: 0;
+  transition: var(--transition);
+}
+.renal__info__btn p:nth-child(1) {
+  padding-top: 0.5rem;
+}
+.renal__info__btn p:nth-child(2) {
+  padding-bottom: 0.5rem;
+}
+@media screen and (max-width: 576px) {
+  .renal__info__section:first-child {
+    border-left: 1px solid #63599e;
+    padding-left: 1rem;
+  }
+}
+@media screen and (max-width: 992px) {
+  .renal__info__section:first-child {
+    border-left: 1px solid #63599e;
+    padding-left: 1rem;
+  }
+}

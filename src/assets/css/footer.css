@@ -1,0 +1,262 @@
+.renal__footer {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #f6f6f7;
+}
+.renal__footer__header {
+  display: flex;
+  align-items: baseline;
+  justify-content: flex-end;
+  gap: 2rem;
+  margin-bottom: 1.8rem;
+}
+.renal__footer__header h5 {
+  font-weight: 500;
+  color: var(--grey-600);
+  font-size: 1.2rem;
+}
+.renal__footer__header input {
+  padding: 0.8rem 10rem 0.8rem 0.5rem;
+  border: 1px solid var(--grey-500);
+  outline: none;
+}
+.renal__footer__main {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  border-top: 1px solid #5b5291;
+  padding: 2rem 0.5rem;
+  gap: 2rem;
+}
+.renal__footer__main .footer__volunteer {
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.renal__footer__links:nth-child(1) p {
+  font-size: 15px;
+}
+.renal__footer__links h5 {
+  font-weight: 700;
+  font-size: 13px;
+  margin-bottom: 1.5rem;
+  text-decoration: underline;
+}
+.renal__footer__links p {
+  color: #5b5291;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.renal__footer__links p:hover {
+  text-decoration: underline;
+}
+.renal___footer__last {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.renal__footer__last__left p {
+  font-size: 13px;
+}
+.renal__footer__last__left p:nth-child(1) {
+  cursor: pointer;
+}
+.renal__footer__last__left p:nth-child(1):hover {
+  text-decoration: underline;
+}
+.renal__footer__last__left p:nth-child(2) {
+  margin-bottom: 0;
+}
+.renal__footer__last__right svg {
+  cursor: pointer;
+  color: var(--grey-600);
+  font-size: 2rem;
+  transition: var(--transition);
+}
+.renal__footer_social__icons svg:nth-child(1):hover {
+  color: #3b5999;
+}
+.renal__footer_social__icons svg:nth-child(2):hover {
+  color: #55acef;
+}
+.renal__footer_social__icons svg:nth-child(3):hover {
+  color: #4d6d8f;
+}
+.renal__footer_social__icons svg:nth-child(4):hover {
+  color: #25f4ee;
+}
+.renal__footer_social__icons svg:nth-child(5):hover {
+  color: #007bb5;
+}
+.renal__footer_social__icons svg:nth-child(6):hover {
+  color: #cb2027;
+}
+.renal__footer_social__icons svg:nth-child(7):hover {
+  color: #bb0000;
+}
+.renal__footer_social__icons svg {
+  margin-left: 3rem;
+}
+.renal__footer__social__optional {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  font-weight: 700;
+}
+.renal__footer__social__optional p {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+.renal__footer__social__optional p:hover svg {
+  color: var(--grey-500);
+}
+.renal__btn {
+  width: 150px;
+  height: 51.59px;
+  color: #fff;
+  padding: 10px 25px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 500;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  letter-spacing: var(--letterSpacing);
+}
+
+.footer__btn {
+  border: none;
+  background: #5b5291;
+  background: linear-gradient(0deg, #5b5291 0%, #5b5291 100%);
+  color: #fff;
+  overflow: hidden;
+}
+.footer__btn:hover {
+  text-decoration: none;
+  color: #fff;
+}
+.footer__btn:before {
+  position: absolute;
+  content: '';
+  display: inline-block;
+  top: -180px;
+  left: 0;
+  width: 30px;
+  height: 100%;
+  background-color: #fff;
+  animation: shiny-btn1 3s ease-in-out infinite;
+}
+.footer__btn:hover {
+  opacity: 0.7;
+}
+.footer__btn:active {
+  box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, 0.3),
+    -4px -4px 6px 0 rgba(116, 125, 136, 0.2),
+    inset -4px -4px 6px 0 rgba(255, 255, 255, 0.2),
+    inset 4px 4px 6px 0 rgba(0, 0, 0, 0.2);
+}
+
+@keyframes shiny-btn1 {
+  0% {
+    transform: scale(0) rotate(45deg);
+    opacity: 0;
+  }
+  80% {
+    transform: scale(0) rotate(45deg);
+    opacity: 0.5;
+  }
+  81% {
+    transform: scale(4) rotate(45deg);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(50) rotate(45deg);
+    opacity: 0;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .renal__footer__header {
+    justify-content: center;
+
+    gap: 1rem;
+  }
+  .renal__footer__header h5 {
+    font-size: 0.9rem;
+  }
+  .renal__footer__header input {
+    padding-right: 5rem;
+  }
+  .renal__footer__header button {
+    font-size: 13px;
+  }
+  .renal__footer_social__icons svg {
+    margin-left: 1.7rem;
+  }
+}
+@media screen and (max-width: 992px) {
+  .renal__footer__header h5 {
+    font-size: 0.7rem;
+  }
+  .renal__footer__header input {
+    padding-right: 4rem;
+    padding-top: 0.5rem;
+  }
+  .renal__footer__header button {
+    font-size: 14px;
+    height: 46px;
+  }
+  .renal___footer__last {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+  .renal__footer_social__icons svg {
+    margin-left: 0.7rem;
+    font-size: 1.5rem;
+  }
+  .renal__footer_social__icons svg:nth-child(1) {
+    margin: 0;
+  }
+  .renal__footer__social__optional p svg {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .renal__footer__header {
+    flex-direction: column;
+    align-items: center;
+  }
+  .renal__footer__header h5 {
+    font-size: 0.9rem;
+  }
+  .renal__footer__header input {
+    padding-right: 4rem;
+    padding-top: 0.5rem;
+    width: 100%;
+  }
+  .renal__footer__header button {
+    font-size: 14px;
+    height: 46px;
+    width: 100%;
+  }
+  .renal__footer__main {
+    gap: 3rem;
+  }
+  .renal__footer__social__optional p span {
+    font-size: 13px;
+  }
+  .renal__footer__last__left {
+    order: 2;
+  }
+  .renal__footer_social__icons svg {
+    margin-left: 0.9rem;
+  }
+}

@@ -1,0 +1,115 @@
+.renal__hospital {
+  background: url('../images/hospital_1.jpg');
+  height: 70vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 2rem;
+  margin-top: 2rem;
+}
+.renal__hospital__container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+.renal__hospital__title {
+  flex: 0.7;
+}
+.renal__hospital__title h1 {
+  font-weight: 700;
+  letter-spacing: 0.5rem;
+  font-size: 3rem;
+  color: var(--white);
+  text-shadow: 6px 6px 12px rgb(0 0 0 / 45%);
+}
+.renal__hospital__options {
+  flex: 0.3;
+}
+.renal__hospital__section__option {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  background: linear-gradient(
+    to right,
+    #b92b27,
+    #1565c0
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  padding: 1rem;
+  border-radius: var(--borderRadius);
+  cursor: pointer;
+  margin-bottom: 0.5rem;
+}
+.renal__hospital__section__option:hover p {
+  color: var(--white);
+}
+.renal__hospital__section__option p {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #63599e;
+  transition: var(--transition);
+}
+.lord__icon__container {
+  transition: var(--transition);
+  border: 0px solid transparent;
+}
+.renal__hospital__section__option:hover .lord__icon__container {
+  border: 1px solid var(--white);
+}
+.renal__hospital__section__option svg {
+  color: var(--white);
+}
+.lord__icon__container {
+  background: linear-gradient(
+    to right,
+    #b92b27,
+    #1565c0
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  border-radius: 50%;
+}
+
+@media screen and (max-width: 1200px) {
+  .renal__hospital__container {
+    gap: 0;
+  }
+  .renal__hospital__section__option p {
+    font-size: 1rem;
+  }
+  .renal__hospital__title h1 {
+    letter-spacing: 0.3rem;
+    font-size: 2.5rem;
+  }
+}
+@media screen and (max-width: 992px) {
+  .renal__hospital {
+    height: 100%;
+  }
+  .renal__hospital__container {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .renal__hospital__title h1 {
+    letter-spacing: 0.3rem;
+    font-size: 2rem;
+  }
+  .renal__hospital__section__option {
+    gap: 2rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .renal__hospital__title h1 {
+    letter-spacing: 0.1rem;
+    font-size: 1rem;
+  }
+  .renal__hospital__section__option {
+    width: 100%;
+    gap: 1rem;
+  }
+  .renal__hospital__title h1 {
+    letter-spacing: 0.3rem;
+    font-size: 1rem;
+  }
+}

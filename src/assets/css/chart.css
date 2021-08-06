@@ -1,0 +1,24 @@
+.chart {
+  display: grid;
+  place-items: center;
+  width: 100% !important;
+}
+#b27e7c43-3b65-4534-81e7-5a19f5ef96c3 {
+  width: 100% !important;
+}
+.fusioncharts-container {
+  width: 100% !important;
+}
+.fusioncharts-container svg {
+  width: 100% !important;
+  border-radius: 1rem;
+  box-shadow: var(--shadow-4);
+}
+.section__chart {
+  padding: 5rem 0;
+}
+@media screen and (max-width: 576px) {
+  .section__chart {
+    padding: 0 0 2rem 0;
+  }
+}
