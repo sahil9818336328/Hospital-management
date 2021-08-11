@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import Home from './pages/Home'
 import Navbar from './components/Navbar'
@@ -34,52 +34,31 @@ const App = () => {
       }
     })
   }, [])
-  const [loading, setLoading] = useState(false)
-  const [preloader, setPreloader] = useState(true)
-  useEffect(() => {
-    const preloader = document.querySelector('.preloader')
-    window.addEventListener('load', function () {
-      preloader.classList.add('hide__preloader')
-      setLoading(true)
-      setPreloader(false)
-    })
-  }, [])
+
   return (
     <React.Fragment>
-      {preloader && (
-        <div className='preloader'>
-          <div className='wrap'>
-            <div className='loader'>
-              <div className='bounceball'></div>
-              <div className='text'>NOW LOADING</div>
-            </div>
-          </div>
-        </div>
-      )}
-      {loading && (
-        <Router>
-          <Sidebar />
-          <Navbar />
-          <Switch>
-            <Route exact path='/'>
-              <Home />
-            </Route>
-            <Route exact path='/login'>
-              <Login />
-            </Route>
-            <Route exact path='/dashboard'>
-              <Dashboard />
-            </Route>
-            <Route exact path='/staff'>
-              <Staff />
-            </Route>
-            <Route exact path='/doctors'>
-              <Doctors />
-            </Route>
-          </Switch>
-          <Footer />
-        </Router>
-      )}
+      <Router>
+        <Sidebar />
+        <Navbar />
+        <Switch>
+          <Route exact path='/'>
+            <Home />
+          </Route>
+          <Route exact path='/login'>
+            <Login />
+          </Route>
+          <Route exact path='/dashboard'>
+            <Dashboard />
+          </Route>
+          <Route exact path='/staff'>
+            <Staff />
+          </Route>
+          <Route exact path='/doctors'>
+            <Doctors />
+          </Route>
+        </Switch>
+        <Footer />
+      </Router>
     </React.Fragment>
   )
 }

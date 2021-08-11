@@ -67,18 +67,10 @@ const Sidebar = () => {
               <a href='#'>For Physicians</a>
             </li>
             <li>
-              <a href='#'>Renal School of Medicine</a>
-            </li>
-            <li>
-              <a href='#'>Newsroom</a>
+              <a href='#'>Login</a>
             </li>
             <li>
               <a href='#'>Contact Us</a>
-            </li>
-            <li>
-              <Link to='/login' className='login'>
-                LOGIN
-              </Link>
             </li>
           </ul>
         </div>

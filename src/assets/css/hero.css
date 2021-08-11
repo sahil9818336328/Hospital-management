@@ -153,15 +153,23 @@ button {
   #mySidenav1 a,
   #mySidenav2 a {
     width: fit-content;
-    font-size: 1rem;
+    font-size: 13px;
   }
   #mySidenav a {
     right: 0;
+    top: 45%;
   }
   #mySidenav1 a {
-    right: -3rem;
+    right: 0;
+    top: 50%;
   }
   #mySidenav2 a {
-    right: -3.5rem;
+    right: 0;
+    top: 55%;
+  }
+  #mySidenav a,
+  #mySidenav1 a,
+  #mySidenav2 a {
+    padding: 0.1rem 0.5rem;
   }
 }
