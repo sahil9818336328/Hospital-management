@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import Home from './pages/Home'
 import Navbar from './components/Navbar'
@@ -11,10 +11,18 @@ import { useGlobalContext } from './context'
 import { auth } from './firebase'
 import Staff from './components/Staff'
 import Doctors from './components/Doctors'
-import './assets/css/home.css'
+import $ from 'jquery'
 
 const App = () => {
   const { dispatch } = useGlobalContext()
+  const [loading, setLoading] = useState(true)
+  useEffect(() => {
+    $(function () {
+      $('.loader').delay(2000).fadeOut('slow')
+      $('#overlayer').delay(2000).fadeOut('slow')
+      setLoading(false)
+    })
+  }, [])
   useEffect(() => {
     // event listner (keeps listening to change in authentication state)
     auth.onAuthStateChanged((authuser) => {
@@ -37,28 +45,35 @@ const App = () => {
 
   return (
     <React.Fragment>
-      <Router>
-        <Sidebar />
-        <Navbar />
-        <Switch>
-          <Route exact path='/'>
-            <Home />
-          </Route>
-          <Route exact path='/login'>
-            <Login />
-          </Route>
-          <Route exact path='/dashboard'>
-            <Dashboard />
-          </Route>
-          <Route exact path='/staff'>
-            <Staff />
-          </Route>
-          <Route exact path='/doctors'>
-            <Doctors />
-          </Route>
-        </Switch>
-        <Footer />
-      </Router>
+      <div id='overlayer'>
+        <span className='loader'>
+          <span className='loader-inner'></span>
+        </span>
+      </div>
+      {!loading && (
+        <Router>
+          <Sidebar />
+          <Navbar />
+          <Switch>
+            <Route exact path='/'>
+              <Home />
+            </Route>
+            <Route exact path='/login'>
+              <Login />
+            </Route>
+            <Route exact path='/dashboard'>
+              <Dashboard />
+            </Route>
+            <Route exact path='/staff'>
+              <Staff />
+            </Route>
+            <Route exact path='/doctors'>
+              <Doctors />
+            </Route>
+          </Switch>
+          <Footer />
+        </Router>
+      )}
     </React.Fragment>
   )
 }
