@@ -1,4 +1,3 @@
-Live at :- https://renal-hospital-project.web.app/
 
 # Getting Started with Create React App
 
